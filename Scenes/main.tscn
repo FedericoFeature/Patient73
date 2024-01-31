@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://th5im2tyeqpe"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_260ni"]
+[ext_resource type="Script" path="res://Scripts/brightness.gd" id="2_o4y7s"]
+[ext_resource type="PackedScene" uid="uid://cvo70qd07iu1" path="res://Others/tile_map.tscn" id="3_o2ad6"]
+[ext_resource type="Shader" path="res://Others/main.gdshader" id="5_i8io7"]
+[ext_resource type="Texture2D" uid="uid://vxyvdkym7foe" path="res://Others/yellow-light-png-hd-19.png" id="5_vitd6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_abeo5"]
+shader = ExtResource("5_i8io7")
+shader_parameter/strength = 16.0
+
+[node name="main" type="Node2D"]
+position = Vector2(160, 60)
+script = ExtResource("1_260ni")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-156, 150)
+scale = Vector2(-0.44788, -0.44788)
+texture = ExtResource("5_vitd6")
+
+[node name="darknessPanel" type="CanvasModulate" parent="."]
+position = Vector2(0, -3)
+script = ExtResource("2_o4y7s")
+
+[node name="TileMap" parent="darknessPanel" instance=ExtResource("3_o2ad6")]
+position = Vector2(0, 0)
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_abeo5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.991538, 1.00662)
+
+[connection signal="introFinished" from="darknessPanel/TileMap" to="darknessPanel" method="_on_tile_map_intro_finished"]
