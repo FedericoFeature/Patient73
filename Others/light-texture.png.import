@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vxyvdkym7foe"
-path="res://.godot/imported/yellow-light-png-hd-19.png-83798ba97d0959abbf8e211e35bed728.ctex"
+uid="uid://brlrh4oyax1y5"
+path="res://.godot/imported/light-texture.png-9f3d58c98aaff63661a135741a3bf41a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Others/yellow-light-png-hd-19.png"
-dest_files=["res://.godot/imported/yellow-light-png-hd-19.png-83798ba97d0959abbf8e211e35bed728.ctex"]
+source_file="res://Others/light-texture.png"
+dest_files=["res://.godot/imported/light-texture.png-9f3d58c98aaff63661a135741a3bf41a.ctex"]
 
 [params]
 
