@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvo70qd07iu1"]
 
-[ext_resource type="Script" path="res://Scripts/maze_gen.gd" id="3_ggd24"]
+[ext_resource type="Script" path="res://scripts/maze_gen.gd" id="3_ggd24"]
 [ext_resource type="Texture2D" uid="uid://05x5jcwt3xs7" path="res://Others/voxelExpansion_tilesheet.png" id="3_x3prx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s6orh"]

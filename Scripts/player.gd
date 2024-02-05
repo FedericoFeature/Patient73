@@ -1,13 +1,19 @@
+class_name Player # For easier reference to player later on
 extends CharacterBody2D
 
-class_name Player # For easier reference to player later on
 
 @export var movement_speed = 200
 
 @onready var animation_tree = $AnimationTree # To apply new animations
+@onready var player_camera = $Camera2D
+@onready var maze_camera = get_tree().get_first_node_in_group("maze_cam")
 
 var active = true # To deactivate the player when necessary
 var direction: Vector2 = Vector2.ZERO
+
+func _process(delta):
+	if(Input.is_action_just_pressed("change_perspective")):
+		switch_camera_on_input()
 
 func _physics_process(delta):
 	if (active):
@@ -39,3 +45,9 @@ func deactivate():
 
 func activate():
 	active = true
+
+func switch_camera_on_input():
+	if (maze_camera.is_current()):
+		player_camera.make_current()
+	else:
+		maze_camera.make_current()
