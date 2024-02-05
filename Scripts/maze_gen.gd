@@ -57,7 +57,7 @@ func delete_cell_at(pos: Vector2):
 func place_wall(pos: Vector2): 
 	set_cell(main_layer, pos, SOURCE_ID, normal_wall_atlas_coords)
 	if(iter_num >= 48):
-		print("finished") #End
+#		print("finished") #End
 		introFinished.emit()
 		#pass
 
