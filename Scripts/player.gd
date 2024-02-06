@@ -2,13 +2,13 @@ class_name Player # For easier reference to player later on
 extends CharacterBody2D
 
 
-@export var movement_speed = 200
+@export var movement_speed: float = 200
 
-@onready var animation_tree = $AnimationTree # To apply new animations
-@onready var player_camera = $Camera2D
-@onready var maze_camera = get_tree().get_first_node_in_group("maze_cam")
+@onready var animation_tree: AnimationTree = $AnimationTree # To apply new animations
+@onready var player_camera: Camera2D = $Camera2D
+@onready var maze_camera: Camera2D = get_tree().get_first_node_in_group("maze_cam")
 
-var active = true # To deactivate the player when necessary
+var active: bool = true # To deactivate the player when necessary
 var direction: Vector2 = Vector2.ZERO
 
 func _process(delta):
