@@ -19,12 +19,10 @@ color = Color(0.403922, 0.403922, 0.403922, 1)
 [node name="TileMap" parent="." instance=ExtResource("3_o2ad6")]
 position = Vector2(0, -3)
 scale = Vector2(0.5, 0.5)
-y_dim = 35
-x_dim = 35
 
 [node name="Player" parent="." instance=ExtResource("3_t25w5")]
 position = Vector2(25, 22)
-movement_speed = 75
+movement_speed = 75.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
