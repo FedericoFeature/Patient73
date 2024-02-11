@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3 uid="uid://gvc8d20u5h0j"]
+
+[ext_resource type="Script" path="res://scripts/options_main_menu.gd" id="1_d2si5"]
+[ext_resource type="PackedScene" uid="uid://be3ylree1dixi" path="res://Scenes/ui_menus/start_main_menu.tscn" id="2_q7emk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fh7a2"]
+font_size = 32
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="OptionsMainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d2si5")
+start_main_menu = ExtResource("2_q7emk")
+
+[node name="BackToMainMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = -95.0
+offset_right = 288.0
+offset_bottom = -64.0
+grow_vertical = 0
+text = "Back"
+
+[node name="SoundsCheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 152.0
+offset_bottom = 88.0
+scale = Vector2(3, 3)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+button_pressed = true
+
+[node name="SoundsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 76.0
+offset_right = 486.0
+offset_bottom = 124.0
+text = "Sound Effects: OFF"
+label_settings = SubResource("LabelSettings_fh7a2")
+
+[node name="SoundsVolumeHSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_top = 92.0
+offset_right = -80.0
+offset_bottom = 108.0
+grow_horizontal = 0
+max_value = 7.0
+value = 3.0
+
+[node name="SoundsVolumeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 44.0
+offset_right = 878.0
+offset_bottom = 92.0
+text = "Volume: 0 / 7"
+label_settings = SubResource("LabelSettings_fh7a2")
+
+[node name="MusicCheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 136.0
+offset_right = 152.0
+offset_bottom = 160.0
+scale = Vector2(3, 3)
+button_pressed = true
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 148.0
+offset_right = 486.0
+offset_bottom = 196.0
+text = "Music: OFF"
+label_settings = SubResource("LabelSettings_fh7a2")
+
+[node name="MusicVolumeHSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_top = 164.0
+offset_right = -80.0
+offset_bottom = 180.0
+grow_horizontal = 0
+max_value = 7.0
+value = 3.0
+
+[node name="MusicVolumeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 116.0
+offset_right = 878.0
+offset_bottom = 164.0
+text = "Volume: 0 / 7"
+label_settings = SubResource("LabelSettings_fh7a2")
+
+[connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
+[connection signal="toggled" from="SoundsCheckBox" to="." method="_on_sounds_check_box_toggled"]
+[connection signal="value_changed" from="SoundsVolumeHSlider" to="." method="_on_sounds_volume_h_slider_value_changed"]
+[connection signal="toggled" from="MusicCheckBox" to="." method="_on_music_check_box_toggled"]
+[connection signal="value_changed" from="MusicVolumeHSlider" to="." method="_on_music_volume_h_slider_value_changed"]
