@@ -44,7 +44,7 @@ func _on_wait_before_player_start_timer_timeout():
 func handle_wait_timer_process():
 	if (is_wait_timer_over):
 		darkness_canvas_modulate.color = lerp(
-			darkness_canvas_modulate.color, black_color, 0.01)
+			darkness_canvas_modulate.color, black_color, 0.05)
 		
 		if(darkness_canvas_modulate.color.r < 0.035):
 			darkness_canvas_modulate.color = black_color

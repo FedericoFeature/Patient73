@@ -12,7 +12,8 @@ config_version=5
 
 config/name="MazeGen"
 run/main_scene="res://Scenes/ui_menus/start_main_menu.tscn"
-config/features=PackedStringArray("4.1", "GL Compatibility")
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.129412, 0.129412, 0.129412, 1)
 config/icon="res://scripts/icon.svg"
 
 [autoload]
@@ -73,4 +74,4 @@ change_perspective={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.471375, 0.471375, 0.471375, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
