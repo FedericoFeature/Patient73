@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1rheo1lqd758"]
+[gd_scene load_steps=11 format=3 uid="uid://c63a5ab2vxw2q"]
 
 [ext_resource type="Script" path="res://scripts/ui/sanity_bar.gd" id="1_s1n1n"]
 [ext_resource type="Texture2D" uid="uid://bcnh2gcadr8gv" path="res://sprites/sanity_bar/vsliderbg.png" id="2_rcj4e"]
@@ -35,9 +35,9 @@ script = ExtResource("1_s1n1n")
 
 [node name="VSlider" type="VSlider" parent="."]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 34.0
 offset_top = 16.0
-offset_right = 56.0
+offset_right = 66.0
 offset_bottom = 216.0
 theme_override_constants/center_grabber = 0
 theme_override_constants/grabber_offset = 0
@@ -51,9 +51,9 @@ step = 0.5
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 16.0
-offset_right = 207.0
-offset_bottom = 129.0
+offset_left = 15.0
+offset_top = 211.0
+offset_right = 154.0
+offset_bottom = 324.0
 scale = Vector2(0.499609, 0.499609)
 texture = ExtResource("4_0onvu")
