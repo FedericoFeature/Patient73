@@ -1,14 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxc84cgmhc20e"]
+[gd_scene load_steps=5 format=3 uid="uid://dc5ns5p0b8n43"]
 
-[ext_resource type="Theme" uid="uid://buoyncyngk41t" path="res://Scenes/ui_menus/themes/accent_button.tres" id="1_07j6j"]
 [ext_resource type="Script" path="res://scripts/ui/game_over.gd" id="1_aromr"]
-[ext_resource type="Theme" uid="uid://c6ka6bijf8i7t" path="res://Scenes/ui_menus/themes/primary_button.tres" id="1_vh7s4"]
+[ext_resource type="Theme" uid="uid://hh87qw5s77n5" path="res://Scenes/ui_menus/themes/gamemode_selection_buttons.tres" id="2_6lu1u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0hcd7"]
 font_size = 60
-font_color = Color(0.0392157, 0.12549, 0.184314, 1)
-outline_size = 12
-outline_color = Color(0.827451, 0.156863, 0.211765, 1)
+font_color = Color(0.827451, 0.156863, 0.211765, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx3dw"]
 font_size = 28
@@ -28,12 +25,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -163.5
+offset_left = -171.5
 offset_top = 32.0
-offset_right = 163.5
+offset_right = 171.5
 offset_bottom = 115.0
 grow_horizontal = 2
-text = "Game Over"
+text = "Game  Over"
 label_settings = SubResource("LabelSettings_0hcd7")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -45,51 +42,54 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -280.0
-offset_top = -75.0
-offset_right = 280.0
-offset_bottom = 75.0
+offset_left = -325.0
+offset_top = -114.5
+offset_right = 325.0
+offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "You didn't escape in time...
-Your fear consumed you. But don't worry, you can always try again..."
+Your fear consumed you.
+
+But don't worry, you can always try again..."
 label_settings = SubResource("LabelSettings_wx3dw")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BackToMenuButton" type="Button" parent="."]
+[node name="GoToTheMenuButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -283.5
-offset_top = -133.0
-offset_right = -36.5
+offset_left = 78.0
+offset_top = -134.0
+offset_right = 337.0
 offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_vh7s4")
+theme = ExtResource("2_6lu1u")
 theme_override_font_sizes/font_size = 32
 text = "Go to the Menu"
 
-[node name="PlayAgainButton" type="Button" parent="."]
+[node name="TryAgainButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 36.0
-offset_top = -132.0
-offset_right = 283.0
+offset_left = -331.5
+offset_top = -133.0
+offset_right = -84.5
 offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_07j6j")
-text = "Go again"
+theme = ExtResource("2_6lu1u")
+theme_override_font_sizes/font_size = 32
+text = "Try again"
 
-[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
-[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="GoToTheMenuButton" to="." method="_on_go_to_the_menu_button_pressed"]
+[connection signal="pressed" from="TryAgainButton" to="." method="_on_try_again_button_pressed"]
