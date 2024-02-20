@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MazeGen"
-run/main_scene="res://Scenes/ui_menus/start_main_menu.tscn"
+run/main_scene="res://Scenes/ui_menus/game_warning_screen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.129412, 0.129412, 0.129412, 1)
 config/icon="res://scripts/icon.svg"
