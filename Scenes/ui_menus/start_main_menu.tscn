@@ -1,16 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://be3ylree1dixi"]
+[gd_scene load_steps=3 format=3 uid="uid://be3ylree1dixi"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_d2v6s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pthy"]
 font_size = 48
 outline_size = 16
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_3sfkp"]
-font_size = 20
-font_color = Color(1, 1, 0, 1)
-outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
 [node name="StartMainMenu" type="Control"]
@@ -22,34 +16,60 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d2v6s")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 120.0
-offset_right = 440.0
-offset_bottom = 53.0
+offset_left = -160.0
+offset_top = -26.5
+offset_right = 160.0
+offset_bottom = 26.5
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 32
-text = "Start game"
+text = "Play"
 
-[node name="OptionsButton" type="Button" parent="."]
+[node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 120.0
-offset_top = 64.0
-offset_right = 440.0
-offset_bottom = 117.0
+offset_left = -160.0
+offset_top = 53.5
+offset_right = 160.0
+offset_bottom = 106.5
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 32
-text = "Options"
+text = "Settings"
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 133.5
+offset_right = 160.0
+offset_bottom = 186.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Quit"
 icon_alignment = 1
 
 [node name="GameNameLabel" type="Label" parent="."]
@@ -62,27 +82,11 @@ offset_top = 64.0
 offset_right = 275.5
 offset_bottom = 134.0
 grow_horizontal = 2
-text = "LEGOLAS OF LEGENDS 2"
+text = "Maze-o-phobia"
 label_settings = SubResource("LabelSettings_5pthy")
-
-[node name="WarningLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -440.0
-offset_right = -120.0
-offset_bottom = 117.0
-grow_horizontal = 0
-grow_vertical = 2
-text = "Warning:
-The game contains flashing lights & irritating sound effects"
-label_settings = SubResource("LabelSettings_3sfkp")
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
