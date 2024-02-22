@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://h2s1hogiggye"]
+[gd_scene load_steps=5 format=3 uid="uid://h2s1hogiggye"]
 
 [ext_resource type="Script" path="res://scripts/ui/game_warning_screen.gd" id="1_hsvhy"]
+[ext_resource type="FontFile" uid="uid://c1pqr8rp3ewy2" path="res://Others/fonts/Teko-Regular.ttf" id="3_vs1hm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uxabx"]
-font_size = 60
+font = ExtResource("3_vs1hm")
+font_size = 150
 font_color = Color(0.827451, 0.156863, 0.211765, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_372ii"]
-font_size = 20
+font = ExtResource("3_vs1hm")
+font_size = 32
 font_color = Color(0.529412, 0.109804, 0.243137, 1)
 
 [node name="GameWarningScreen" type="Control"]
@@ -40,9 +43,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -407.0
-offset_top = -37.0
+offset_top = -36.5
 offset_right = 407.0
-offset_bottom = 38.0
+offset_bottom = 100.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
@@ -59,12 +62,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -230.5
-offset_top = -160.0
+offset_top = -128.0
 offset_right = 230.5
-offset_bottom = -96.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("3_vs1hm")
+theme_override_font_sizes/font_size = 28
 text = "I hereby confirm that I've read and understood
 the warning  message above and wish to play"
 icon_alignment = 1

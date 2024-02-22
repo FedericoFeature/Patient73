@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc5ns5p0b8n43"]
+[gd_scene load_steps=7 format=3 uid="uid://dc5ns5p0b8n43"]
 
 [ext_resource type="Script" path="res://scripts/ui/game_over.gd" id="1_aromr"]
+[ext_resource type="FontFile" uid="uid://bj4x5pw0v6nbj" path="res://Others/fonts/Ginga.ttf" id="2_3f6ql"]
 [ext_resource type="Theme" uid="uid://hh87qw5s77n5" path="res://Scenes/ui_menus/themes/gamemode_selection_buttons.tres" id="2_6lu1u"]
+[ext_resource type="FontFile" uid="uid://c1pqr8rp3ewy2" path="res://Others/fonts/Teko-Regular.ttf" id="3_cmudp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0hcd7"]
-font_size = 60
+font = ExtResource("2_3f6ql")
+font_size = 150
 font_color = Color(0.827451, 0.156863, 0.211765, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx3dw"]
-font_size = 28
+font = ExtResource("3_cmudp")
+font_size = 40
 font_color = Color(0.529412, 0.109804, 0.243137, 1)
 
 [node name="GameOver" type="Control"]
@@ -30,7 +34,7 @@ offset_top = 32.0
 offset_right = 171.5
 offset_bottom = 115.0
 grow_horizontal = 2
-text = "Game  Over"
+text = "Game>  Over>"
 label_settings = SubResource("LabelSettings_0hcd7")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -43,9 +47,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -325.0
-offset_top = -114.5
+offset_top = -50.5
 offset_right = 325.0
-offset_bottom = 50.5
+offset_bottom = 114.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "You didn't escape in time...
@@ -71,7 +75,6 @@ offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_6lu1u")
-theme_override_font_sizes/font_size = 32
 text = "Go to the Menu"
 
 [node name="TryAgainButton" type="Button" parent="."]
@@ -88,7 +91,6 @@ offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_6lu1u")
-theme_override_font_sizes/font_size = 32
 text = "Try again"
 
 [connection signal="pressed" from="GoToTheMenuButton" to="." method="_on_go_to_the_menu_button_pressed"]

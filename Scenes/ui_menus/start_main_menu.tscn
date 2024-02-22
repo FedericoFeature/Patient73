@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://be3ylree1dixi"]
+[gd_scene load_steps=5 format=3 uid="uid://be3ylree1dixi"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_d2v6s"]
+[ext_resource type="FontFile" uid="uid://c1pqr8rp3ewy2" path="res://Others/fonts/Teko-Regular.ttf" id="2_is365"]
+[ext_resource type="FontFile" uid="uid://bj4x5pw0v6nbj" path="res://Others/fonts/Ginga.ttf" id="3_fph6k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pthy"]
-font_size = 48
+font = ExtResource("3_fph6k")
+font_size = 175
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 
@@ -31,7 +34,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_is365")
+theme_override_font_sizes/font_size = 44
 text = "Play"
 
 [node name="SettingsButton" type="Button" parent="."]
@@ -49,7 +53,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_is365")
+theme_override_font_sizes/font_size = 44
 text = "Settings"
 icon_alignment = 1
 
@@ -68,7 +73,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_is365")
+theme_override_font_sizes/font_size = 44
 text = "Quit"
 icon_alignment = 1
 
@@ -78,11 +84,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -275.5
-offset_top = 64.0
+offset_top = 32.0
 offset_right = 275.5
-offset_bottom = 134.0
+offset_bottom = 204.0
 grow_horizontal = 2
-text = "Maze-o-phobia"
+text = "Maze-o-phobia>"
 label_settings = SubResource("LabelSettings_5pthy")
 horizontal_alignment = 1
 vertical_alignment = 1
