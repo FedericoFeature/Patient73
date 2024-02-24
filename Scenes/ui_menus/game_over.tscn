@@ -7,13 +7,13 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_0hcd7"]
 font = ExtResource("2_3f6ql")
-font_size = 150
-font_color = Color(0.827451, 0.156863, 0.211765, 1)
+font_size = 215
+font_color = Color(0.74902, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx3dw"]
 font = ExtResource("3_cmudp")
-font_size = 40
-font_color = Color(0.529412, 0.109804, 0.243137, 1)
+font_size = 37
+font_color = Color(0.815686, 0.203922, 0, 1)
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -29,10 +29,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -171.5
-offset_top = 32.0
-offset_right = 171.5
-offset_bottom = 115.0
+offset_left = -304.0
+offset_top = -31.0
+offset_right = 286.0
+offset_bottom = 213.0
 grow_horizontal = 2
 text = "Game>  Over>"
 label_settings = SubResource("LabelSettings_0hcd7")
@@ -46,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -325.0
-offset_top = -50.5
-offset_right = 325.0
-offset_bottom = 114.5
+offset_left = -323.0
+offset_top = -43.0
+offset_right = 327.0
+offset_bottom = 129.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "You didn't escape in time...
@@ -68,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 78.0
-offset_top = -134.0
-offset_right = 337.0
-offset_bottom = -80.0
+offset_left = 150.0
+offset_top = -104.0
+offset_right = 409.0
+offset_bottom = -44.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_6lu1u")
@@ -84,10 +84,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -331.5
-offset_top = -133.0
-offset_right = -84.5
-offset_bottom = -79.0
+offset_left = -395.5
+offset_top = -104.0
+offset_right = -148.5
+offset_bottom = -44.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_6lu1u")
