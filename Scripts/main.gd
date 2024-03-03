@@ -13,6 +13,8 @@ var is_wait_timer_over: bool = false
 var white_color: Color = Color(1, 1 ,1 , 1)
 var black_color: Color = Color(0, 0, 0, 1)
 
+var fade = SFade.new()
+
 signal on_darkness_is_set
 
 #const maze = preload("res://Scenes/main.tscn")
@@ -21,6 +23,8 @@ signal on_darkness_is_set
 func _ready():
 	maze_camera.make_current()
 	handle_wait_timer_setup()
+	
+	fade.fade_out_in(get_tree().current_scene, load("res://Scenes/ui_menus/start_main_menu.tscn"))
 
 func _physics_process(delta):
 	handle_wait_timer_process()

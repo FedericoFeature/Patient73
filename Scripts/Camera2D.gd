@@ -6,7 +6,7 @@ func _ready() -> void:
 	adjust_camera()
 
 func adjust_camera():
-	var maze = get_node("/root/main/TileMap") as MazeGen
+	var maze = get_node("/root/Main/TileMap") as MazeGen
 	var tile_size = 64
 	var maze_size = Vector2(maze.x_dim + 1, maze.y_dim + 1) * tile_size
 	self.zoom =  Vector2(self.get_viewport().size.y, self.get_viewport().size.y) / maze_size
