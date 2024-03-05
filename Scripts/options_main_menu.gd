@@ -14,6 +14,8 @@ extends Control
 @onready var sounds_volume_hslider: HSlider = $SoundsVolumeHSlider
 @onready var music_volume_hslider: HSlider = $MusicVolumeHSlider
 
+var fade = SFade.new()
+
 func _ready():
 	sounds_volume_label.text = "Volume: " + str(
 		round((sounds_volume_hslider.value))) + " / " + str(
@@ -43,7 +45,9 @@ func _on_music_volume_h_slider_value_changed(value):
 
 
 func _on_back_to_main_menu_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/ui_menus/start_main_menu.tscn")
+	fade.fade_out_in(get_tree().current_scene,
+	load("res://Scenes/ui_menus/start_main_menu.tscn"), 0.25, 0.25)
+	#get_tree().change_scene_to_file("res://Scenes/ui_menus/start_main_menu.tscn")
 
 func slider_access_handler():
 	sounds_volume_hslider.editable = true if sounds_check_box.button_pressed else false

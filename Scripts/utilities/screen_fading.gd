@@ -39,6 +39,10 @@ _fade_in_color: Color = fade_in_color_default):
 	fade_out_color_rect.size = fade_out_scene.get_viewport().content_scale_size
 	fade_out_color_rect.color = fade_out_color
 	fade_out_color_rect.color.a = 0
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
+	fade_out_color_rect.process_mode = Node.PROCESS_MODE_ALWAYS
+	fade_out_canvas_layer.process_mode = Node.PROCESS_MODE_ALWAYS
+
 	
 	var fade_out_tween: Tween = fade_out_scene.create_tween()
 	fade_out_tween.finished.connect(_fade_out_in_tween_out_finished)
@@ -60,8 +64,12 @@ func _fade_out_in_tween_out_finished():
 	fade_in_color_rect.set_position(Vector2.ZERO)
 	fade_in_color_rect.size = fade_in_scene.get_viewport().content_scale_size
 	fade_in_color_rect.color = fade_in_color
+	fade_in_color_rect.process_mode = Node.PROCESS_MODE_ALWAYS
+	fade_in_canvas_layer.process_mode = Node.PROCESS_MODE_ALWAYS
+	fade_in_scene.get_tree().paused = true	
 	
 	var fade_in_tween: Tween = fade_in_scene.create_tween()
+	fade_in_tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	fade_in_tween.finished.connect(_fade_out_in_tween_in_finished)	
 	fade_in_tween.tween_property(fade_in_color_rect, "color",
 		Color(fade_in_color_rect.color.r, fade_in_color_rect.color.g,
@@ -70,10 +78,13 @@ func _fade_out_in_tween_out_finished():
 func _fade_out_in_tween_in_finished():
 	fade_in_scene.queue_free()
 	root_parent.get_tree().change_scene_to_file(fade_in_scene_resource.resource_path)
+	fade_in_scene.get_tree().paused = false
 
 func fade_out_no_scene_change(_scene: Node, _fade_out_time: float = 1,
 _fade_in_time: float = 1, _fade_out_color: Color = fade_out_color_default,
 _fade_in_color: Color = fade_in_color_default):
+	#print(callback)
+	#callback.call()
 	
 	fade_out_scene = _scene
 	fade_out_time = _fade_out_time
