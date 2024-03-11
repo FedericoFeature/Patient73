@@ -12,6 +12,8 @@ var current_letter_num = 65
 const label = preload("res://Scenes/simple_label.tscn")
 var iter_num:int = 0
 signal introFinished
+var has_maze_gen_started = false
+var is_game_paused = false
 
 @export var y_dim = 35
 @export var x_dim = 35
@@ -25,13 +27,26 @@ var adj4 = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	y_dim = Globals.grid_size
-	x_dim = Globals.grid_size
-	Globals.letters_to_show.clear()
-	place_border()
-	dfs(starting_coords)
+	if (get_tree().paused == true):
+		is_game_paused = true
 	
-	
+	#y_dim = Globals.grid_size
+	#x_dim = Globals.grid_size
+	#Globals.letters_to_show.clear()
+	#place_border()
+	#dfs(starting_coords)
+
+func _physics_process(_delta):
+	if (not is_game_paused && not has_maze_gen_started):
+		has_maze_gen_started = true
+		y_dim = Globals.grid_size
+		x_dim = Globals.grid_size
+		Globals.letters_to_show.clear()
+		place_border()
+		dfs(starting_coords)
+	elif (is_game_paused && not has_maze_gen_started):
+		if(get_tree().paused == false):
+			is_game_paused = false
 
 func _input(event: InputEvent) -> void:
 	pass
