@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://c1pqr8rp3ewy2" path="res://Others/fonts/Teko-Regular.ttf" id="1_35nl3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25hfb"]
-content_margin_left = 10.0
+content_margin_left = 9.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 6.0
@@ -13,6 +13,7 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.827451, 0.156863, 0.211765, 1)
+anti_aliasing_size = 2.266
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhdj8"]
 content_margin_left = 10.0
@@ -26,6 +27,7 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.592157, 0, 0.129412, 1)
 shadow_color = Color(0, 0, 0, 1)
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ha4ac"]
 content_margin_left = 10.0
@@ -40,6 +42,7 @@ border_width_bottom = 3
 border_color = Color(0.827451, 0.156863, 0.211765, 1)
 
 [resource]
+default_font_size = 0
 Button/colors/font_color = Color(0.882353, 0.882353, 0.882353, 1)
 Button/colors/font_hover_color = Color(0.858824, 0.858824, 0.858824, 1)
 Button/colors/font_pressed_color = Color(0.807843, 0.807843, 0.807843, 1)

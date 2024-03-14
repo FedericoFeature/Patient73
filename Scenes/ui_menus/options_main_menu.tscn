@@ -41,35 +41,15 @@ theme_override_fonts/font = ExtResource("3_b0mow")
 theme_override_font_sizes/font_size = 45
 text = "Back"
 
-[node name="SoundsCheckBox" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 1058.0
-offset_top = 136.0
-offset_right = 1082.0
-offset_bottom = 160.0
-scale = Vector2(3, 3)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 0
-button_pressed = true
-
-[node name="SoundsLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1128.0
-offset_top = 151.0
-offset_right = 1380.0
-offset_bottom = 202.0
-text = "Sound Effects: OFF"
-label_settings = SubResource("LabelSettings_fh7a2")
-
 [node name="SoundsVolumeHSlider" type="HSlider" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -608.0
-offset_top = 256.0
+offset_top = 272.0
 offset_right = -288.0
-offset_bottom = 272.0
+offset_bottom = 288.0
 grow_horizontal = 0
 max_value = 10.0
 value = 5.0
@@ -77,28 +57,10 @@ value = 5.0
 [node name="SoundsVolumeLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 23.0
-offset_top = 243.0
+offset_top = 259.0
 offset_right = 331.0
-offset_bottom = 297.0
+offset_bottom = 313.0
 text = "Sounds volume: 0/10"
-label_settings = SubResource("LabelSettings_fh7a2")
-
-[node name="MusicCheckBox" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 1058.0
-offset_top = 232.0
-offset_right = 1082.0
-offset_bottom = 256.0
-scale = Vector2(3, 3)
-button_pressed = true
-
-[node name="MusicLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1128.0
-offset_top = 247.0
-offset_right = 1274.0
-offset_bottom = 298.0
-text = "Music: OFF"
 label_settings = SubResource("LabelSettings_fh7a2")
 
 [node name="MusicVolumeHSlider" type="HSlider" parent="."]
@@ -107,9 +69,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -608.0
-offset_top = 323.0
+offset_top = 339.0
 offset_right = -288.0
-offset_bottom = 339.0
+offset_bottom = 355.0
 grow_horizontal = 0
 max_value = 10.0
 value = 5.0
@@ -117,9 +79,9 @@ value = 5.0
 [node name="MusicVolumeLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 23.0
-offset_top = 306.0
+offset_top = 322.0
 offset_right = 311.0
-offset_bottom = 360.0
+offset_bottom = 376.0
 text = "Music volume: 0/10"
 label_settings = SubResource("LabelSettings_fh7a2")
 
@@ -129,15 +91,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -184.0
-offset_top = -42.0
+offset_top = -34.0
 offset_right = 184.0
-offset_bottom = 214.0
+offset_bottom = 222.0
 grow_horizontal = 2
 text = "Settings"
 label_settings = SubResource("LabelSettings_a0bmh")
 
 [connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
-[connection signal="toggled" from="SoundsCheckBox" to="." method="_on_sounds_check_box_toggled"]
 [connection signal="value_changed" from="SoundsVolumeHSlider" to="." method="_on_sounds_volume_h_slider_value_changed"]
-[connection signal="toggled" from="MusicCheckBox" to="." method="_on_music_check_box_toggled"]
 [connection signal="value_changed" from="MusicVolumeHSlider" to="." method="_on_music_volume_h_slider_value_changed"]
