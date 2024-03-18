@@ -25,7 +25,9 @@ Globals="*res://scripts/Globals.gd"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/initial_position_type=0
+window/size/resizable=false
 window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [input]
 
