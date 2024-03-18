@@ -39,14 +39,13 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 24.0
-offset_top = -57.0
-offset_right = 524.0
-offset_bottom = 3.0
+offset_top = -60.0
+offset_right = 1259.0
+offset_bottom = -4.0
 grow_vertical = 2
 theme = ExtResource("3_po43m")
-text = "Mazephobia"
+text = "Mazephobia: Fear of being lost. The victim is induced in panic and stress, and their judgement is clouded."
 alignment = 0
-text_overrun_behavior = 4
 
 [node name="DypraxiaButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.431373)
@@ -60,7 +59,7 @@ offset_right = 524.0
 offset_bottom = 104.0
 grow_vertical = 2
 theme = ExtResource("3_po43m")
-text = "Dypraxia"
+text = "Dypraxia: Neurodevelopmental disorder characterized by brain messages not being accurately transmitted to the body. The victim suffers from uncoordination of muscles and bad orientation."
 alignment = 0
 
 [node name="HemiplagiaButton" type="Button" parent="."]
@@ -75,7 +74,7 @@ offset_right = 524.0
 offset_bottom = 209.0
 grow_vertical = 2
 theme = ExtResource("3_po43m")
-text = "Hemiplagia"
+text = "Hemiplagia: In its most severe form, complete paralysis of half of the body. Can be caused by different medical conditions, including congenital causes, trauma, tumors, or stroke."
 alignment = 0
 
 [node name="BackToMainMenuButton" type="Button" parent="."]
@@ -91,6 +90,14 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_ky1jf")
 theme_override_font_sizes/font_size = 36
 text = "Back"
+
+[node name="MenuButton" type="MenuButton" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1235.0
+offset_bottom = 56.0
+theme = ExtResource("3_po43m")
+text = "Mazephobia: Fear of being lost. The victim is induced in panic and stress, and their judgement is clouded."
 
 [connection signal="mouse_entered" from="MazephobiaButton" to="." method="_on_mouse_entered" binds= ["mazephobia"]]
 [connection signal="mouse_exited" from="MazephobiaButton" to="." method="_on_mouse_exited" binds= ["mazephobia"]]
